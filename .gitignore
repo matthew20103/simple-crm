@@ -1,0 +1,14 @@
+# Local database (contains your CRM data)
+crm.db
+*.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Personal Claude Code settings (not shared with the class)
+.claude/settings.local.json
+
+# OS clutter
+.DS_Store
+Thumbs.db

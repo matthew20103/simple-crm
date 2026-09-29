@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python --version)",
+      "Bash(python3 --version)",
+      "Bash(py --version)",
+      "Bash(python app.py*)",
+      "Bash(python3 app.py*)",
+      "Bash(py app.py*)",
+      "Bash(python -m unittest*)",
+      "Bash(python3 -m unittest*)",
+      "Bash(py -m unittest*)",
+      "Bash(ls*)",
+      "Bash(dir*)"
+    ],
+    "deny": [
+      "Bash(pip install*)",
+      "Bash(pip3 install*)",
+      "Bash(python -m pip install*)",
+      "Bash(python3 -m pip install*)",
+      "Bash(py -m pip install*)",
+      "Bash(npm install*)",
+      "Bash(curl*)",
+      "Bash(wget*)",
+      "WebFetch",
+      "Read(./.env)",
+      "Read(./.env.*)"
+    ]
+  }
+}
