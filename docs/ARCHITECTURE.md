@@ -1,5 +1,9 @@
 # SimpleCRM – System Architecture
 
+> **For students:** this document is written mainly for Claude, so it's fine if the technical
+> parts don't make sense. Read **section 1** (design goals) and **section 2** (what your laptop
+> needs). The rest tells Claude *how* to build the CRM safely.
+
 ## 1. Design goals
 
 | Goal | What it means for us |

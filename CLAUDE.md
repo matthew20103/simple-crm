@@ -1,7 +1,13 @@
 # SimpleCRM – Project Instructions for Claude
 
-> Claude Code reads this file at the start of every session. Keep it short and accurate.
-> Lines marked `STUDENT TODO` are for **you** to complete during Step 1 of the lab.
+> **For students:** Claude Code reads this file at the start of every session. It's like a
+> briefing note for a new assistant. Your instructor has already written the technical parts.
+> **Your job is Part B**: answer the questions in plain English, no programming words needed.
+> Replace each `(write your answer here)` with your own words.
+
+---
+
+# Part A – Technical setup (written by your instructor, no changes needed)
 
 ## Project overview
 
@@ -29,36 +35,77 @@ It runs locally and the user opens it at **http://127.0.0.1:8000**.
 | Styling   | One plain CSS file in `static/`                    |
 | Tests     | `unittest` (standard library)                      |
 
-## How to run the app
+## How to run the app and the tests
 
-<!-- STUDENT TODO: Write the exact command(s) to start the app on macOS AND on Windows,
-     the URL to open, how to use a different port, and how to stop the server.
-     Hint: see ARCHITECTURE.md sections 2 and 8. -->
-
-## How to run the tests
-
-<!-- STUDENT TODO: Write the exact command to run all tests (macOS and Windows).
-     Hint: the tests live in the tests/ folder and use unittest. -->
+- Start the app. macOS: `python3 app.py` · Windows: `python app.py` (or `py app.py`)
+- Open **http://127.0.0.1:8000**. Use another port with `--port 8080`. Stop with **Ctrl+C**.
+- Run the tests. macOS: `python3 -m unittest discover -s tests` · Windows: `python -m unittest discover -s tests`
+- Tests must use a temporary database (set the `CRM_DB` environment variable), never the real `crm.db`.
 
 ## Coding rules
 
 - Keep functions small and give them clear names. Readable beats clever.
-<!-- STUDENT TODO: Add at least 4 more rules. Think about:
-     - how SQL must be written (look at the security table in ARCHITECTURE.md)
-     - how user text must be put into HTML
-     - which module is allowed to contain SQL
-     - what to do after a successful form POST
-     - what happens when form input is invalid -->
+- SQL only with `?` placeholders. All SQL lives in `db.py`.
+- Escape every value shown in HTML with `html.escape`.
+- After a successful form POST, redirect with `303 See Other` (Post/Redirect/Get).
+- Unknown pages and IDs show a friendly 404 page, never a Python error in the browser.
 
 ## How Claude should work in this project
 
 - Work one milestone at a time (see docs/LAB_GUIDE.md). Before a big change, show a short plan first.
 - After every code change, run the tests and fix any failures before saying you are done.
-- Explain what you changed in 2–3 plain sentences. The student is learning.
-<!-- STUDENT TODO: Add one rule telling Claude what to do if it thinks it needs
-     a package that is NOT in the Python standard library. -->
+- The student is **not a programmer**. Explain what you did in plain English, without jargon.
+- Treat the student's answers in Part B as requirements. If an answer is unclear, ask.
 
-## Definition of done
+---
 
-<!-- STUDENT TODO: List 3–4 checks that must ALL be true before a task counts as "done".
-     Hint: think about tests, the acceptance criteria in SPEC.md, and trying it in the browser. -->
+# Part B – What I want (written by the student, in plain English)
+
+### B1. Who is this CRM for?
+*Who would use it, and what for? Think of a real team or business.*
+*Example: "A small travel agency keeping track of corporate clients and the calls we make to them."*
+
+- (write your answer here)
+
+### B2. When someone makes a mistake on a form
+*What should happen if someone forgets a required field (like the last name) or types an email address wrongly?*
+*Sentence starters: "The app should…", "The person should see…", "Nothing should…"*
+
+- (write your answer here)
+
+### B3. Unusual text
+*People's names and notes can contain accents, apostrophes (O'Brien) or odd symbols like `< >`. How should the app show them?*
+
+- (write your answer here)
+
+### B4. Deleting things
+*What should happen before something is deleted? And if a company is deleted, what should happen to the people who work there?*
+
+- (write your answer here)
+
+### B5. Extra software
+*Your laptop is managed by IT, and we are not allowed to install extra software. What should Claude do if it thinks it needs something extra?*
+
+- (write your answer here)
+
+### B6. How Claude should talk to me
+*How do you want Claude to explain its work? Think about length, words to avoid, and when it should stop and ask you.*
+
+- (write your answer here)
+
+### B7. When is it "done"?
+*When would you tell your manager "the CRM is ready"? List 3 things you would check yourself first.*
+*Sentence starters: "I can…", "I have tried…", "Claude has confirmed…"*
+
+- (write your answer here)
+- (write your answer here)
+- (write your answer here)
+
+---
+
+# Part C – Rules from my answers (Claude fills this in)
+
+*After you finish Part B, ask Claude: "Turn my answers in Part B into clear rules for yourself
+and write them here in Part C. Don't change my original answers."*
+
+- (Claude will write here)

@@ -3,22 +3,29 @@ description: Check the current code against the acceptance criteria in docs/SPEC
 allowed-tools: Read, Grep, Glob, Bash(python -m unittest*), Bash(python3 -m unittest*), Bash(py -m unittest*)
 ---
 
+<!-- For students: a slash command is just written instructions for Claude, in plain English.
+     Don't change the part between the --- lines at the top.
+     Replace each "(write your answer here)" below with your own words. -->
+
 ## Goal
 
-Tell me which acceptance criteria (AC1–AC16) in @docs/SPEC.md the current code meets,
-and which it does not. This is a **read-only check**: do not change any files.
+Check which items on the "is it done?" checklist (AC1–AC16 in @docs/SPEC.md) the CRM already
+passes, and which it doesn't. This is a **check only**: do not change any files.
+Also run the automated tests and include the result.
 
-## Steps
+## How to check
 
-<!-- STUDENT TODO: Write 4–6 numbered steps for Claude to follow.
-     Hints:
-     - What should Claude read first?
-     - Which command proves the automated tests pass?
-     - For each AC item, what evidence should Claude look for in the code?
-     - What should Claude do if it cannot decide whether an item passes? -->
+*Imagine you're asking a careful colleague to check your CRM against the checklist.
+What should they do, in order? Write 3–5 steps.*
+*Sentence starters: "First…", "For each item on the checklist…", "If you are not sure…"*
 
-## Output format
+1. (write your answer here)
+2. (write your answer here)
+3. (write your answer here)
 
-<!-- STUDENT TODO: Describe exactly how the report should look.
-     Hint: a table with one row per AC item works well. Which columns would you want?
-     Finish with a short "next 3 things to fix" list. -->
+## How to report back
+
+*How do you want the results presented, so you can understand them at a glance?
+Think about: a table or a list? How to mark pass and fail? What should come at the end?*
+
+- (write your answer here)

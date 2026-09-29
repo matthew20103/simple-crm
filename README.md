@@ -6,6 +6,9 @@ Activities, Dashboard) that runs on your own laptop at **http://127.0.0.1:8000**
 It is built for company laptops: **Python 3.10+ standard library only**, so there is nothing to
 `pip install` and no internet is needed while the app runs.
 
+**No programming experience needed.** You won't write code. You'll brief Claude in plain
+English, check its plan, and test the result in your browser.
+
 ## Get the starter kit
 
 **Option A: with git**
@@ -26,7 +29,7 @@ cd simple-crm
 
 | Path | Purpose |
 |------|---------|
-| `CLAUDE.md` | Project instructions for Claude (you fill in the blanks) |
+| `CLAUDE.md` | Project instructions for Claude (you answer the questions in Part B) |
 | `.claude/settings.json` | Permission guard rails |
 | `.claude/commands/` | Custom slash commands: `/run-crm`, `/check-spec`, `/add-feature` |
 | `.claude/agents/` | The `spec-reviewer` subagent |

@@ -1,5 +1,9 @@
 # SimpleCRM – Functional Specification
 
+> **For students:** this document is written mainly for Claude. You **don't** need to understand
+> the tables. Read the introduction below and the **checklist in section 4**. That checklist
+> is how you'll test your CRM.
+
 SimpleCRM is a small customer relationship manager for one user. It runs on your own
 computer and you open it in a browser at **http://127.0.0.1:8000**.
 
@@ -122,13 +126,13 @@ All pages share a top navigation bar with the links **Dashboard · Contacts · C
 - [ ] AC4: I can create, view, edit and delete a **contact**, and link it to a company
 - [ ] AC5: Creating a contact with an empty last name shows an error and saves nothing
 - [ ] AC6: Entering `not-an-email` as an email shows an error
-- [ ] AC7: Searching `/contacts?q=<part of a company name>` finds the contacts at that company
-- [ ] AC8: Filtering by status shows only contacts with that status
+- [ ] AC7: Typing part of a company name in the Contacts search box finds the contacts at that company
+- [ ] AC8: Choosing a status (for example "customer") in the Contacts filter shows only contacts with that status
 - [ ] AC9: I can log an activity on a contact, and it appears on the contact page and on the Dashboard
 - [ ] AC10: Deleting a contact also deletes its activities
 - [ ] AC11: Deleting a company keeps its contacts, and they now show no company
 - [ ] AC12: A contact named `<script>alert(1)</script>` is displayed as plain text
-- [ ] AC13: Visiting `/contacts/9999` shows a 404 page, not a crash
+- [ ] AC13: Opening the address of a contact that doesn't exist (http://127.0.0.1:8000/contacts/9999) shows a friendly "not found" page, not a crash
 - [ ] AC14: Data is still there after the server is stopped and started again
 - [ ] AC15: The project installs **no** third-party packages (standard library only)
 - [ ] AC16: Automated tests pass with `python -m unittest discover -s tests`
